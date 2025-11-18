@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Enquire - Online Novels</title>
+    <meta name="description" content="Enquire about services, volunteering or sponsorship with Online Novels. Ask about availability, costs, and how to get involved." />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="IMG/logo.image.jpg" alt="Online Novels logo">
+            <h1>Online Novels</h1>
+        </div>
+        
+
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="books.html">Featured Novels</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact" aria-labelledby="enquiry-heading">
+            <h2 id="enquiry-heading">Enquiry</h2>
+            <p>Use this form to enquire about becoming a volunteer, sponsoring our platform, or about our services (reading plans, group subscriptions, etc.). Fill in the form and we will respond with availability and cost estimates.</p>
+
+            <form id="enquiry-form" class="contact-form" novalidate>
+                
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                <label for="phone">Phone (optional)</label>
+                <input type="tel" id="phone" name="phone" placeholder="+27 6X XXX XXXX">
+
+                 
+                <label for="type">I would like to (choose one)</label>
+                <select id="type" name="type" required>
+                    <option value="">-- Select purpose --</option>
+                    <option value="service">Ask about a service / subscription</option>
+                    <option value="volunteer">Volunteer opportunities</option>
+                    <option value="sponsor">Sponsorship / Partnership</option>
+                    <option value="other">Other</option>
+                </select>
+
+                 
+                <div id="service-options" style="display:none;">
+                    <label for="service-plan">Service / Plan</label>
+                    <select id="service-plan" name="service-plan">
+                        <option value="single">Single-book Read (free)</option>
+                        <option value="monthly">Monthly plan — Unlimited reading (R79/month)</option>
+                        <option value="annual">Annual plan — Unlimited reading (R799/year)</option>
+                        <option value="group">Group subscription (5 users) — R299/month</option>
+                    </select>
+
+                    <label for="quantity">Quantity / Users (for group or sponsorship)</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                </div>
+
+                 
+                <div id="volunteer-options" style="display:none;">
+                    <p>Volunteer interest areas (tick all that apply):</p>
+                    <label><input type="checkbox" name="volunteer-role" value="content"> Content & editing</label><br>
+                    <label><input type="checkbox" name="volunteer-role" value="social"> Social media</label><br>
+                    <label><input type="checkbox" name="volunteer-role" value="events"> Events & outreach</label>
+                </div>
+
+                <label for="message">Tell us more</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us what you need..." required></textarea>
+
+                <button type="submit" class="btn">Submit Enquiry</button>
+                <button type="button" id="clear-btn" class="btn" style="background:#ccc;color:#333;margin-left:8px;">Clear</button>
+            </form>
+
+             
+            <div id="result" aria-live="polite" style="display:none; margin-top:20px; background:#fff; padding:18px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,.08);"></div>
+
+            
+            <div class="contact-info" style="margin-top:20px;">
+                <h3>Need immediate help?</h3>
+                <p>Email: <a href="mailto:kperfetia@gmail.com">kperfetia@gmail.com</a></p>
+                <p>Phone: +27 65 666 8698</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Online Novels. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+     
+<div id="popupModal" class="modal">
+  <div class="modal-content">
+    <span class="close-popup">&times;</span>
+    <p id="popupMessage"></p>
+  </div>
+</div>
+
+</body>
+</html>
